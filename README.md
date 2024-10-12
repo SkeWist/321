@@ -33,3 +33,12 @@ Untracked: Файл, который еще не добавлен в индекс
 Tracked: Файл, который отслеживается Git.
 Staged: Файл, который был добавлен в индекс и готов к фиксации.
 Modified: Файл, который был изменен после последнего коммита.
+
+```mermaid
+    A[Untracked] -->|git add| B[Staged]
+    B -->|git commit| C[Tracked]
+    C -->|modify| D[Modified]
+    D -->|git add| B
+    D -->|git commit| C
+```
+
